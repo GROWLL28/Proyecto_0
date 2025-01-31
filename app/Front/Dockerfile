@@ -4,6 +4,8 @@ FROM python:3.9-slim
 # Instalar las dependencias necesarias
 RUN apt-get update && apt-get install -y \
     libgtk-3-0 \
+    libgstreamer1.0-0 \
+    gstreamer1.0-plugins-base \
     && rm -rf /var/lib/apt/lists/*
 
 # Establecer el directorio de trabajo
